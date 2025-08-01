@@ -1,9 +1,8 @@
 ---
 title: 5 Essential Developer Tools for an Optimized Workflow
 date: 2025/8/01
-description: A list of Developer tools that have helped my workflow and productivity. These tools are 
-essential for any developer looking to optimize their workflow.
-tag: Developer Tools, Productivity, Workflow
+description: A list of Developer tools that have helped my workflow and productivity. These tools are essential for any developer looking to optimize their workflow. 
+tag: Developer-Tools, Productivity, Workflow
 author: Tawfiq (wegoagain)
 ---
 
@@ -42,7 +41,4 @@ layout, which is a game changer for managing multiple tabs.
 
 ### Raycast(MacOS only)
 
-Sometimes i rotate between linux and mac, for mac users, Raycast is a must-have productivity tool. It 
-replaces Spotlight with a more powerful and customizable launcher. I use it to quickly access 
-applications, files, and even run scripts. The ability to create custom commands and workflows has 
-made my daily tasks much more efficient.
+Sometimes i rotate between linux and mac, for mac users, Raycast is a must-have productivity tool. It replaces Spotlight with a more powerful and customizable launcher. I use it to quickly access applications, files, and even run scripts. The ability to create custom commands and workflows has made my daily tasks much more efficient.

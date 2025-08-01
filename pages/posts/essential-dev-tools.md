@@ -1,8 +1,10 @@
 ---
-title: 5 Essential Developer Tools for an Optimized Workflow
-date: 2025-07-19
-description: A list of Developer tools that have helped my workflow and productivity. These tools are essential for any developer looking to optimize their workflow.
-tag: Developer Tools, Productivity, Workflow
+title: Deploying a Three-Tier Architecture on AWS
+date: 2025-06-19
+description: A comprehensive project demonstrating a three-tier architecture using AWS services like EC2 instances, RDS, VPC. It includes a VPC setup, security groups, public/private subnets and availability zones for high availability. 
+tag: AWS, Terraform, Three-Tier
 author: Tawfiq (wegoagain)
 ---
+
+`updating blog...`
 

@@ -27,7 +27,7 @@ async function generate() {
           'https://wegoagain00.vercel.app/posts/' + name.replace(/\.mdx?/, ''),
         date: frontmatter.data.date,
         description: frontmatter.data.description,
-        categories: frontmatter.data.tags.split(', '),
+        categories: frontmatter.data.tag.split(', '),
         author: frontmatter.data.author
       })
     })

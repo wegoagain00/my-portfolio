@@ -1,9 +1,12 @@
 ---
 title: 5 Essential Developer Tools for an Optimized Workflow
-date: 2025/8/01
-description: A list of Developer tools that have helped my workflow and productivity. These tools are essential for any developer looking to optimize their workflow. 
-tag: Developer-Tools, Productivity, Workflow
-author: Tawfiq (wegoagain)
+date: 2025-08-01
+description: A list of Developer tools that have helped my workflow and productivity. These tools are essential for any developer looking to optimize their workflow.
+tags:
+  - Developer Tools
+  - Productivity
+  - Workflow
+author: "Tawfiq (wegoagain)"
 ---
 
 ### Neovim (LazyVim)

@@ -16,46 +16,46 @@
   font-named-instance: 'Italic';
 }*/
 
-/* Catppuccin Mocha Theme Variables */
+/* Catppuccin Frappé Theme Variables */
 :root {
   /* Base Colors */
-  --ctp-rosewater: #f5e0dc;
-  --ctp-flamingo: #f2cdcd;
-  --ctp-pink: #f5c2e7;
-  --ctp-mauve: #cba6f7;
-  --ctp-red: #f38ba8;
-  --ctp-maroon: #eba0ac;
-  --ctp-peach: #fab387;
-  --ctp-yellow: #f9e2af;
-  --ctp-green: #a6e3a1;
-  --ctp-teal: #94e2d5;
-  --ctp-sky: #89dceb;
-  --ctp-sapphire: #74c7ec;
-  --ctp-blue: #89b4fa;
-  --ctp-lavender: #b4befe;
+  --ctp-rosewater: #f2d5cf;
+  --ctp-flamingo: #eebebe;
+  --ctp-pink: #f4b8e4;
+  --ctp-mauve: #ca9ee6;
+  --ctp-red: #e78284;
+  --ctp-maroon: #ea999c;
+  --ctp-peach: #ef9f76;
+  --ctp-yellow: #e5c890;
+  --ctp-green: #a6d189;
+  --ctp-teal: #81c8be;
+  --ctp-sky: #99d1db;
+  --ctp-sapphire: #85c1dc;
+  --ctp-blue: #8caaee;
+  --ctp-lavender: #babbf1;
 
   /* Text Colors */
-  --ctp-text: #cdd6f4;
-  --ctp-subtext1: #bac2de;
-  --ctp-subtext0: #a6adc8;
+  --ctp-text: #c6d0f5;
+  --ctp-subtext1: #b5bfe2;
+  --ctp-subtext0: #a5adce;
 
   /* Overlay Colors */
-  --ctp-overlay2: #9399b2;
-  --ctp-overlay1: #7f849c;
-  --ctp-overlay0: #6c7086;
+  --ctp-overlay2: #949cbb;
+  --ctp-overlay1: #838ba7;
+  --ctp-overlay0: #737994;
 
   /* Surface Colors */
-  --ctp-surface2: #585b70;
-  --ctp-surface1: #45475a;
-  --ctp-surface0: #313244;
+  --ctp-surface2: #626880;
+  --ctp-surface1: #51576d;
+  --ctp-surface0: #414559;
 
   /* Background Colors */
-  --ctp-base: #1e1e2e;
-  --ctp-mantle: #181825;
-  --ctp-crust: #11111b;
+  --ctp-base: #303446;
+  --ctp-mantle: #292c3c;
+  --ctp-crust: #232634;
 }
 
-/* Updated body with Catppuccin Mocha theme */
+/* Updated body with Catppuccin Frappé theme */
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
@@ -67,7 +67,7 @@ body {
   font-variant: common-ligatures contextual;
   letter-spacing: -0.02em;
 
-  /* Catppuccin Mocha theme colors */
+  /* Catppuccin Frappé theme colors */
   background-color: var(--ctp-base);
   color: var(--ctp-text);
 }
@@ -109,7 +109,7 @@ img.next-image {
   margin: 0;
 }
 
-/* Updated link colors for Catppuccin Mocha */
+/* Updated link colors for Catppuccin Frappé */
 .prose a {
   color: var(--ctp-blue);
   text-decoration: none;
@@ -130,7 +130,7 @@ img.next-image {
   color: var(--ctp-blue);
 }
 
-/* Additional Catppuccin Mocha styling */
+/* Additional Catppuccin Frappé styling */
 
 /* Code blocks */
 pre {

@@ -62,15 +62,15 @@ A three-tier architecture using AWS services. It includes a VPC setup, security 
 
 <div className="project-card">
 
-## ☁️ AWS Cost Optimisation using Lambda
+## ☁️ Lambda Snapshot Cleaner (Cost Optimisation)
 
-A serverless automation to reduce AWS storage costs by identifying and deleting stale EBS snapshots. The solution uses a Python Lambda function (with boto3) to scan for EBS snapshots that are no longer associated with any active EC2 instance and deletes them. The project also demonstrates setting up the necessary IAM permissions.\
+Automated AWS cost savings by creating a Python Lambda function that finds and deletes unattached EBS snapshots. The solution uses Boto3 to scan EC2 resources and is configured with a specific IAM role for secure, least-privilege execution.\
 **Tech Stack:** AWS (Lambda, EC2, EBS, IAM), Python
 
-[GitHub Repo ↗](https://github.com/wegoagain00/aws-cost-optimisation) | [Documentation ↗](https://github.com/wegoagain00/aws-cost-optimisation)
+[GitHub Repo ↗](https://github.com/wegoagain00/aws-cost-optimisation) | [Documentation ↗](https://github.com/wegoagain00/aws-cost-optimisation/blob/main/README.md)
 
 <Image
-  src="/images/toupdate"
+  src="/images/aws-cost-optimisation-ebs/lambda-ebs.png"
   alt=""
   width={600}
   height={338}

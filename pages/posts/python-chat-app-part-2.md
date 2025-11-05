@@ -153,7 +153,8 @@ Whats made this easier and what we have solved is:
 
 We've successfully containerised a multi-service application. We've replaced a fragile, manual setup with a reliable, portable, and isolated one.
 
-**In our next post**, we'll take this a step further. We'll build an automated CI/CD pipeline with GitHub Actions so that every time we push new code, our `my-chat-app` image is built and pushed to a central registry automatically.
+**In our next post** [Part 3](https://wegoagain00.vercel.app/posts/python-chat-app-part-3), we'll take this a step further. We'll build an automated CI/CD pipeline with GitHub Actions so that every time we push new code, our `my-chat-app` image is built and pushed to a central registry automatically.
+
 
 
 ---

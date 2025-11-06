@@ -10,7 +10,7 @@ author: Tawfiq (wegoagain)
 - **Part 1: The Manual Way**
 - **Part 2: A Production-Ready Docker Setup**
 - **Part 3: The Automated CI Pipeline with GitHub Actions & ECR**
-- **Part 4: Deploying to Kubernetes with Terraform & EKS (coming soon)**
+- **Part 4: Deploying to Kubernetes in EKS (Helm for Load Balancer)**
 
 The project is a real-time chat application. It's a microservice based app that has two distinct components:
 1. **The Web App:** A Python server using the Flask framework. It handles the user interface (the web page) and uses Socket.IO to manage the real-time, bi-directional chat messages.

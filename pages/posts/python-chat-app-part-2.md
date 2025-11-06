@@ -10,7 +10,7 @@ author: Tawfiq (wegoagain)
 - **Part 1: The Manual Way (The "Before" Picture)**
 - **Part 2: A Production-Ready Docker Setup**
 - **Part 3: The Automated CI Pipeline with GitHub Actions & ECR**
-- **Part 4: Deploying to Kubernetes with Terraform & EKS**
+- **Part 4: Deploying to Kubernetes in EKS (Helm for Load Balancer)**
 
 I HIGHLY RECOMMEND WATCHING TUTORIALS ON WHAT DOCKER IS AND UNDERSTANDING ITS CAPABILITY before proceeding, these easily can be found on youtube. I will provide some useful links below:
 
@@ -153,7 +153,7 @@ Whats made this easier and what we have solved is:
 
 We've successfully containerised a multi-service application. We've replaced a fragile, manual setup with a reliable, portable, and isolated one.
 
-**In our next post** [Part 3](https://wegoagain00.vercel.app/posts/python-chat-app-part-3), we'll take this a step further. We'll build an automated CI/CD pipeline with GitHub Actions so that every time we push new code, our `my-chat-app` image is built and pushed to a central registry automatically.
+**In our next post** [Part 3](https://wegoagain00.vercel.app/posts/python-chat-app-part-3), we'll take this a step further. We'll build an automated CI pipeline with GitHub Actions so that every time we push new code, our `my-chat-app` image is built and pushed to a central registry (ECR) automatically.
 
 
 

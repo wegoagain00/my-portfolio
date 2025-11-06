@@ -2,7 +2,7 @@
 title: How I Deployed a Python Chat App (ECR and CI Implementation) - Part 3
 date: 2025-11-03
 description: In Part 3, we'll build an automated Continuous Integration (CI) pipeline using GitHub Actions and AWS Elastic Container Registry (ECR) to store and distribute our Docker image from GitHub.
-tag: DevOps, AWS, ECR, CI/CD, GitHub Actions, Troubleshooting, Project
+tag: DevOps, AWS, ECR, CI, GitHub Actions, Troubleshooting, Project
 author: Tawfiq (wegoagain)
 ---
 
@@ -10,7 +10,7 @@ author: Tawfiq (wegoagain)
 - **Part 1: The Manual Way (The "Before" Picture)**
 - **Part 2: A Production-Ready Docker Setup**
 - **Part 3: The Automated CI Pipeline with GitHub Actions & ECR**
-- **Part 4: Deploying to Kubernetes with Terraform & EKS**
+- **Part 4: Deploying to Kubernetes in EKS (Helm for Load Balancer)**
 
 Just like part 2 I recommended you to learn Docker, In this I recommend learning about CI/CD pipelines, Github Actions as well as understanding basics of ECR (AWS service) and how it works. AWS understanding in general is required.
 
@@ -161,14 +161,18 @@ A few minutes later, it finished with a green checkmark.
 I went back to the AWS ECR console, clicked on my my-chat-app repository, and there it was—my newly built image, tagged with both latest and the unique commit hash.
 ![alt text](/images/python-chat-app/img-35.png)
 
-
+---
 
 ### Conclusion
 We've now officially entered the world of CI/CD, (well CI so far!). Our application is no longer just code on our laptop. It's a reliable, versioned, and centrally-stored artifact in a cloud registry.
 
 We've solved the "it works on my machine" problem and the "how do I share my image?" problem.
 
-In the final part of this series, we'll build the "CD" (Continuous Deployment) part of the pipeline. We'll use Terraform to build a production-grade EKS cluster and write the Kubernetes manifests to automatically deploy our new chat app image from ECR. Lets head to [Part 4](https://wegoagain00.vercel.app/posts/python-chat-app-part-4)
+Our CI pipeline is now complete! We've successfully built an automated assembly line that takes our code, builds it into a Docker image, and pushes it to our private 'warehouse' in AWS ECR.
+
+But an image in a warehouse isn't a running application. It's just a stored artifact.
+
+In the final part of this series, we'll build the 'factory' to run it. We will use `eksctl` to provision a production-grade EKS (Kubernetes) cluster. Then, we'll write the Kubernetes manifests to deploy our chat app (and its Redis database) from ECR to the live, public internet Lets head to [Part 4](https://wegoagain00.vercel.app/posts/python-chat-app-part-4)
 
 
 ---

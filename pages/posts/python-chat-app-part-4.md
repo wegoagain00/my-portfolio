@@ -1,7 +1,7 @@
 ---
 title: How I Deployed a Python Chat App (Complete EKS Deployment - Helm for Load Balancer) - Part 4
 date: 2025-11-03
-description: In Part 3, we'll build an automated Continuous Integration (CI) pipeline using GitHub Actions and AWS Elastic Container Registry (ECR) to store and distribute our Docker image from GitHub.
+description: In Part 4, we'll build our production-grade Amazon EKS (Kubernetes) Cluster and deploy our application for the world to see.
 tag: DevOps, AWS, EKS, Helm, Kubernetes, Fargate, Load Balancer, Microservices, Troubleshooting, Project
 author: Tawfiq (wegoagain)
 ---
@@ -57,7 +57,7 @@ I ran this command in my terminal: (change region if you need to)
 
 ```
 eksctl create cluster \
-  --name python-redis-chat \
+  --name python-redis-chat-1 \
   --region eu-west-2 \
   --fargate
 ```
@@ -102,7 +102,7 @@ It allows any pod using the `aws-load-balancer-controller` service account to au
 
 ```YAML
 eksctl create iamserviceaccount \
-    --cluster=python-redis-chat \
+    --cluster=python-redis-chat-1 \
     --namespace=kube-system \
     --name=aws-load-balancer-controller \
     --attach-policy-arn=arn:aws:iam::373317459404:policy/AWSLoadBalancerControllerIAMPolicy \
@@ -116,26 +116,26 @@ I actually got an error because i need an IAM OIDC and this is like a way to ena
 
 
 Run the below
-`eksctl utils associate-iam-oidc-provider --region=eu-west-2 --cluster=python-redis-chat`
+`eksctl utils associate-iam-oidc-provider --region=eu-west-2 --cluster=python-redis-chat-1`
 same again with --approve at the end
-`eksctl utils associate-iam-oidc-provider --region=eu-west-2 --cluster=python-redis-chat --approve`
+`eksctl utils associate-iam-oidc-provider --region=eu-west-2 --cluster=python-redis-chat-1 --approve`
 
 Then rerun the previous command and service account should be created successfully.
 
-![alt text](/images/python-chat-app/img-38.png)
-
 ![alt text](/images/python-chat-app/img-39.png)
+
+![alt text](/images/python-chat-app/img-40.png)
 
 ### 2a. Installing AWS Load Balancer Controller
 We will be using something called Helm (I recommend researching this topic as its a powerful tool)
 
-Add the eks-charts Helm chart repository.
+Add the eks-charts Helm chart repository. \
 `helm repo add eks https://aws.github.io/eks-charts`
 
-Update your local repo to make sure that you have the most recent charts.
+Update your local repo to make sure that you have the most recent charts. \
 `helm repo update eks`
 
-Now lets install the load balancer controller (make sure to change cluster, VPC and region to your own)
+Now lets install the load balancer controller (make sure to change cluster name, VPC and region to your own)
 
 ```YAML
 helm install aws-load-balancer-controller eks/aws-load-balancer-controller \
@@ -148,9 +148,8 @@ helm install aws-load-balancer-controller eks/aws-load-balancer-controller \
   --version 1.14.0
 ```
 
-![alt text](/images/python-chat-app/img-40.png)
 
-to verify its all working it can take up to 2/3 minutes
+to verify its all working it can take up to 2/3 minutes \
 `kubectl get deployment -n kube-system aws-load-balancer-controller`
 
 ![alt text](/images/python-chat-app/img-41.png)
@@ -162,7 +161,7 @@ You should see 2/2
 ## Step 3: Translating Our App for Kubernetes (The Manifests)
 This is probably the biggest step. We need to "translate" our manual docker run commands from Part 2 into a set of declarative YAML files that Kubernetes understands.
 
-These files are called manifests. I created a k8s/ folder in my repo to hold them. This folder will contain all the necessary Kubernetes configuration files for our application.
+These files are called manifests. I created a `k8s/` folder in my repo to hold them. This folder will contain all the necessary Kubernetes configuration files for our application.
 
 ![alt text](/images/python-chat-app/img-43.png)
 ### 3a. The Database: `redis-deployment.yml` & `redis-service.yml`
@@ -301,6 +300,7 @@ Now lets run the command to apply the configuration files, its easier than doing
 kubectl apply -f k8s/
 ```
 
+![alt text](/images/python-chat-app/img-45.png)
 Kubernetes now does all the work for me:
 
 Pulls the `redis:latest` image and starts the database pod.
@@ -316,7 +316,6 @@ After a few minutes, I ran two commands to check the status.
 
 First, I checked the pods. I can see all three pods are Running:
 `kubectl get pods`
-![alt text](/images/python-chat-app/img-45.png)
 
 Next, I checked my services to find the public URL:
 `kubectl get services`

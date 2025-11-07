@@ -84,9 +84,7 @@ This is where I securely store the keys so my workflow can use them without expo
 So in summary we have the IAM user (who is doing something), the policy is (what it can do), and the access keys are (how it will be able to 'log in').
 
 ### Step 3: Building the "Assembly Line" (GitHub Actions Workflow)
-This is the core of our CI pipeline. We will create a new file in our project: `.github/workflows/ci.yml`.\ .github and workflows are folders and ci.yml is a file. This YAML file is a set of instructions for GitHub Actions.
-
-![alt text](/images/python-chat-app/img-29.png)
+This is the core of our CI pipeline. We will create a new file path in our project: `.github/workflows/ci.yml`. .github and workflows are folders and ci.yml is a file. This YAML file is a set of instructions for GitHub Actions.
 
 Here is the complete workflow file, paste this in the ci.yml:
 
@@ -108,7 +106,7 @@ jobs:
       ECR_REPOSITORY: my-chat-app # The name of my ECR repo
       # This will be the full AWS URI, e.g., 12345.dkr.ecr.eu-west-2.amazonaws.com (make sure you put your region here if different)
       ECR_REGISTRY: ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com
-      # I had an issue where using env.AWS_REGION in the ECR_REGISTRY variable caused an error. Instead, I used the AWS_REGION variable directly. You cant use env variables at jobs level. (research this)
+
 
     steps:
       # 3. Get my code
@@ -149,16 +147,12 @@ So dont forget to add the AWS_ACCOUNT_ID (found at the top right corner on AWS c
 
 Now that the code is in the `ci.yml` file, we can automate the process of building and pushing our Docker image to Amazon Elastic Container Registry (ECR). This ensures that our application is always up-to-date and ready to deploy. Commit the file using `git add .`, `git commit -m "Add ci.yml file"` and `git push`.
 
-
-![alt text](/images/python-chat-app/img-32.png)
-
-
 Now, the magic happens. I committed this ci.yml file and pushed it to my master(main) branch. I immediately clicked on the "Actions" tab in my GitHub repository and saw my new pipeline, "Build and Push Docker Image to ECR," was running.
 ![alt text](/images/python-chat-app/img-33.png)
 A few minutes later, it finished with a green checkmark.
 ![alt text](/images/python-chat-app/img-34.png)
 
-I went back to the AWS ECR console, clicked on my my-chat-app repository, and there it was—my newly built image, tagged with both latest and the unique commit hash.
+I went back to the AWS ECR console, clicked on my my-chat-app repository, and there it was, my newly built image, tagged with both latest and the unique commit hash.
 ![alt text](/images/python-chat-app/img-35.png)
 
 ---
@@ -172,7 +166,8 @@ Our CI pipeline is now complete! We've successfully built an automated assembly 
 
 But an image in a warehouse isn't a running application. It's just a stored artifact.
 
-In the final part of this series, we'll build the 'factory' to run it. We will use `eksctl` to provision a production-grade EKS (Kubernetes) cluster. Then, we'll write the Kubernetes manifests to deploy our chat app (and its Redis database) from ECR to the live, public internet Lets head to [Part 4](https://wegoagain00.vercel.app/posts/python-chat-app-part-4)
+In the final part of this series, we'll build the 'factory' to run it. We will use `eksctl` to provision a production-grade EKS (Kubernetes) cluster. Then, we'll write the Kubernetes manifests to deploy our chat app (and its Redis database) from ECR to the live, public internet \
+Lets head to [Part 4](https://wegoagain00.vercel.app/posts/python-chat-app-part-4)
 
 
 ---

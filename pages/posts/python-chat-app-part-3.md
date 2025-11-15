@@ -14,7 +14,7 @@ author: Tawfiq (wegoagain)
 
 Just like part 2 I recommended you to learn Docker, In this I recommend learning about CI/CD pipelines, Github Actions as well as understanding basics of ECR (AWS service) and how it works. AWS understanding in general is required.
 
-In [Part 2](https://wegoagain00.vercel.app/posts/python-chat-app-part-2), we created a perfect, robust Docker setup. Our app now runs reliably on our own laptop. But this still leaves two big problems:
+In [Part 2](https://wegoagain-dev.vercel.app/posts/python-chat-app-part-2), we created a perfect, robust Docker setup. Our app now runs reliably on our own laptop. But this still leaves two big problems:
 
 ***It's Manual***: If I change one line of code in app.py, I have to remember to manually run `docker build -t my-chat-app .` again.
 
@@ -167,7 +167,7 @@ Our CI pipeline is now complete! We've successfully built an automated assembly 
 But an image in a warehouse isn't a running application. It's just a stored artifact.
 
 In the final part of this series, we'll build the 'factory' to run it. We will use `eksctl` to provision a production-grade EKS (Kubernetes) cluster. Then, we'll write the Kubernetes manifests to deploy our chat app (and its Redis database) from ECR to the live, public internet \
-Lets head to [Part 4](https://wegoagain00.vercel.app/posts/python-chat-app-part-4)
+Lets head to [Part 4](https://wegoagain-dev.vercel.app/posts/python-chat-app-part-4)
 
 
 ---

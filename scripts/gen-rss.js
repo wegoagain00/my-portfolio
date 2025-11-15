@@ -6,8 +6,8 @@ const matter = require('gray-matter')
 async function generate() {
   const feed = new RSS({
     title: 'wegoagain',
-    site_url: 'https://wegoagain00.vercel.app',
-    feed_url: 'https://wegoagain00.vercel.app/feed.xml'
+    site_url: 'https://wegoagain-dev.vercel.app',
+    feed_url: 'https://wegoagain-dev.vercel.app/feed.xml'
   })
 
   const posts = await fs.readdir(path.join(__dirname, '..', 'pages', 'posts'))
@@ -24,7 +24,7 @@ async function generate() {
       allPosts.push({
         title: frontmatter.data.title,
         url:
-          'https://wegoagain00.vercel.app/posts/' + name.replace(/\.mdx?/, ''),
+          'https://wegoagain-dev.vercel.app/posts/' + name.replace(/\.mdx?/, ''),
         date: frontmatter.data.date,
         description: frontmatter.data.description,
         categories: frontmatter.data.tag.split(', '),

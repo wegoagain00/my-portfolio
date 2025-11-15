@@ -65,7 +65,7 @@ Now we'll set up the web application. We can't just run `python app.py` because 
 1. **Clone the code:**
 
 ```
-git clone https://github.com/wegoagain00/redis-chat-app-python.git
+git clone https://github.com/wegoagain-dev/redis-chat-app-python.git
 cd redis-chat-app-python
 ```
 
@@ -167,4 +167,4 @@ Since we didn't set that variable, the app connected to `127.0.0.1:6379`, where 
 
 We've successfully run our application, but we've also created a messy, fragile, and non-portable system. We've perfectly demonstrated _why_ we need a better way.
 
-**Now we're ready for** [Part 2](https://wegoagain00.vercel.app/posts/python-chat-app-part-2). We'll solve every single one of these problems by "containerising" our application with Docker. We'll package the app, the database, and all their dependencies into isolated, portable boxes that can run anywhere.
+**Now we're ready for** [Part 2](https://wegoagain-dev.vercel.app/posts/python-chat-app-part-2). We'll solve every single one of these problems by "containerising" our application with Docker. We'll package the app, the database, and all their dependencies into isolated, portable boxes that can run anywhere.

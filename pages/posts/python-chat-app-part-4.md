@@ -13,7 +13,7 @@ author: Tawfiq (wegoagain)
 - **Part 4: Deploying to Kubernetes in EKS (Helm for Load Balancer)**
 
 ### "Why are we doing this": We Need to Run Our App
-Our journey is almost to completion (maybe we will build on this project in the future :D ). In [Part 3](https://wegoagain00.vercel.app/posts/python-chat-app-part-3), we built an automated CI pipeline. Our `my-chat-app` image is now being built and pushed to an AWS ECR "warehouse" every time we commit code.
+Our journey is almost to completion (maybe we will build on this project in the future :D ). In [Part 3](https://wegoagain-dev.vercel.app/posts/python-chat-app-part-3), we built an automated CI pipeline. Our `my-chat-app` image is now being built and pushed to an AWS ECR "warehouse" every time we commit code.
 
 But that's where it stops. Our image is just sitting in a warehouse, not running.
 
@@ -105,7 +105,7 @@ eksctl create iamserviceaccount \
     --cluster=python-redis-chat-1 \
     --namespace=kube-system \
     --name=aws-load-balancer-controller \
-    --attach-policy-arn=arn:aws:iam::373317459404:policy/AWSLoadBalancerControllerIAMPolicy \
+    --attach-policy-arn=arn:aws:iam::${AWS_ACCOUNT_ID}:policy/AWSLoadBalancerControllerIAMPolicy \
     --override-existing-serviceaccounts \
     --region eu-west-2 \
     --approve

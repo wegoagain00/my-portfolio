@@ -30,7 +30,7 @@ First, I needed a "stale" snapshot to test with. I spun up a simple EC2 instance
 ## Step 2: The Lambda "Robot"
 I went to the Lambda console and created a new function from scratch (using the Python 3.13 runtime). I scrolled down to the code editor, pasted in my Boto3 script that contains the cleanup logic, and hit "Deploy."
 ![alt text](/images/aws-cost-optimisation-ebs/img-2.png)
-(The Python code is in my repository [here](https://github.com/wegoagain00/aws-cost-optimisation))
+(The Python code is in my repository [here](https://github.com/wegoagain-dev/aws-cost-optimisation))
 
 ![alt text](/images/aws-cost-optimisation-ebs/img-3.png)
 I created a simple test event and hit the Test button. It failed immediately.

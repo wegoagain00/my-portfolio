@@ -19,7 +19,7 @@ I HIGHLY RECOMMEND WATCHING TUTORIALS ON WHAT DOCKER IS AND UNDERSTANDING ITS CA
 - [Youtube](https://youtu.be/GFgJkfScVNU?si=7DMab3wxxmCD_IrR)
 
 ## The "Why": Solving Our Manual Mess
-In [Part 1](https://wegoagain00.vercel.app/posts/python-chat-app-part-1), we got our Python chat app running locally. While it worked, the process was a mess:
+In [Part 1](https://wegoagain-dev.vercel.app/posts/python-chat-app-part-1), we got our Python chat app running locally. While it worked, the process was a mess:
 1. **Dependency Hell:** We hit a wall with C-compilation errors (`greenlet`) just because I was on a newer version of Python.
 2. **Polluted Host:** We had to install Redis directly on our host machine, where it runs all the time.
 3. **Fragile & Not Portable:** The _only_ reason it worked was because our app's default database host (`localhost`) happened to match our manual Redis install. This would break on any other machine.
@@ -153,7 +153,7 @@ Whats made this easier and what we have solved is:
 
 We've successfully containerised a multi-service application. We've replaced a fragile, manual setup with a reliable, portable, and isolated one.
 
-**In our next post** [Part 3](https://wegoagain00.vercel.app/posts/python-chat-app-part-3), we'll take this a step further. We'll build an automated CI pipeline with GitHub Actions so that every time we push new code, our `my-chat-app` image is built and pushed to a central registry (ECR) automatically.
+**In our next post** [Part 3](https://wegoagain-dev.vercel.app/posts/python-chat-app-part-3), we'll take this a step further. We'll build an automated CI pipeline with GitHub Actions so that every time we push new code, our `my-chat-app` image is built and pushed to a central registry (ECR) automatically.
 
 
 

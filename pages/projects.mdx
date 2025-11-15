@@ -17,13 +17,38 @@ import Image from 'next/image'
 A CI/CD pipeline and Kubernetes deployment for a multi-container Python (Flask) and Redis chat application. Deployed to a "serverless" EKS Fargate cluster with a Network Load Balancer.\
 **Tech Stack:** AWS (EKS, Fargate, ECR, NLB), Docker, Kubernetes, GitHub Actions, Helm
 
-[GitHub Repo ↗](https://github.com/wegoagain00/redis-chat-app-python) | [Blog ↗](https://wegoagain00.vercel.app/posts/python-chat-app-part-1)
+[GitHub Repo ↗](https://github.com/wegoagain00/redis-chat-app-python) | [Blog ↗](https://wegoagain.dev/posts/python-chat-app-part-1)
 
 <Image
-  src="/images/redis-chat-app-v1.png"
+  src="/images/python-chat-app/redis-chat-app-v1.svg"
   alt=""
-  width={600}
-  height={338}
+  width={700}
+  height={400}
+  className="next-image rounded-lg border border-gray-200 mt-4"
+/>
+
+</div>
+
+</div>
+
+---
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+
+<div className="project-card">
+
+## 📸 Event-Driven Image Pipeline
+
+A serverless pipeline that automatically processes images uploaded to S3, extracts metadata and saves the details to DynamoDB. SQS is used to queue the images for processing.\
+**Tech Stack:** AWS (S3, Lambda, SQS, DynamoDB), Terraform, GitHub Actions
+
+[GitHub Repo ↗](https://github.com/wegoagain00/event-driven-image-pipeline) | [Blog ↗](https://wegoagain.dev/posts/event-driven-image-pipeline)
+
+<Image
+  src="/images/event-driven-image-pipeline.svg"
+  alt=""
+  width={700}
+  height={400}
   className="next-image rounded-lg border border-gray-200 mt-4"
 />
 
@@ -47,8 +72,8 @@ A Three Tier App on AWS EKS (managed node) using an external database which is h
 <Image
   src="/images/three-tier-eks.jpeg"
   alt="3 tier eks"
-  width={600}
-  height={338}
+  width={700}
+  height={400}
   className="next-image rounded-lg border border-gray-200 mt-4"
 />
 
@@ -72,8 +97,8 @@ A three-tier architecture using AWS services. It includes a VPC setup, security 
 <Image
   src="/images/three-tier.svg"
   alt="AWS infrastructure diagram created with Terraform"
-  width={600}
-  height={338}
+  width={700}
+  height={400}
   className="next-image rounded-lg border border-gray-200 mt-4"
 />
 
@@ -97,8 +122,8 @@ Automated AWS cost savings by creating a Python Lambda function that finds and d
 <Image
   src="/images/aws-cost-optimisation-ebs/lambda-ebs.png"
   alt=""
-  width={600}
-  height={338}
+  width={700}
+  height={400}
   className="next-image rounded-lg border border-gray-200 mt-4"
 />
 

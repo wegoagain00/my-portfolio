@@ -13,12 +13,11 @@ export default function Nextra({ Component, pageProps }) {
           title="RSS"
           href="/feed.xml"
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          rel="preload"
-          href="/fonts/Inter-roman.latin.var.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
+          href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap"
+          rel="stylesheet"
         />
       </Head>
       <Component {...pageProps} />

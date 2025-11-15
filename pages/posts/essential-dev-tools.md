@@ -6,21 +6,13 @@ tag: Developer Tools, Productivity, Workflow
 author: Tawfiq (wegoagain)
 ---
 
-### Neovim (LazyVim)
+### Zed
 
-All I have to say is wow, this is a massive change from VSCode. Long term, I can definitely see 
-myself using Neovim as my main editor. The speed, the efficiency, and the customization options are 
-just incredible. LazyVim has made it so easy to get started with Neovim, and I love how it integrates 
-with all my other tools. It sounds scary but just go to lazyvim.org. Just be ready to be all keyboard 
-and to be researching how to practically do everything in the terminal. In DevOps that's all you will 
-be in anyway..
+While I loved the power of Neovim, I've found my new home in **Zed**. Zed is a blazingly fast, modern code editor that feels like the perfect hybrid of Neovim's speed and VSCode's simplicity. It has all the essentials built-in—LSP for smart code completion, a fast integrated terminal, and even Vim keybindings all without the complex setup time. It's minimalist, keyboard-centric, and gets out of my way, which is exactly what I want in an editor. As someone who lives in the terminal for DevOps, Zed's performance is a massive productivity boost.
 
-### Notion
+### Obsidian
 
-Hands down the best tool for organizing my thoughts, projects, and notes. Notion's flexibility allows 
-me to create databases, wikis, and task lists all in one place. It's become my go to for project 
-management and personal organization. I use it to keep track of my blog posts, Devops Learning & 
-Projects, and even my daily tasks.
+This is, without a doubt, my single most important tool. I've moved my entire life from Notion to **Obsidian**, and it's been a gamechanger. Obsidian is my 'second brain', Markdown based knowledge base. It's incredibly fast, private, and I'm not locked into an online service. I use it to manage my entire **P.A.R.A. system**, where my `02_Areas` act as my main dashboards for DevOps and so on, and my `01_Projects` (like my blog posts) are all tracked. The ability to link notes and create dynamic dashboards with the Dataview plugin means my knowledge base *improves* over time.
 
 ### TUI (LazyGit and LazyDocker)
 
@@ -31,13 +23,9 @@ compared to using the command line directly. LazyGit integrates with LazyVim, ma
 powerful. I can manage my Git repositories without leaving my editor, which is a huge productivity 
 boost.
 
-### Firefox
+### Brave
 
-I'll have to say that Firefox is my go-to browser for development. Its developer tools are top-notch, 
-and the ability to customize it with extensions like uBlock Origin and Privacy Badger makes it a 
-great choice for privacy-conscious developers. I also love the Firefox DevTools, which provide 
-powerful features for debugging and inspecting web applications. Can't forget the horizontal tab 
-layout, which is a game changer for managing multiple tabs.
+I've made the switch to **Brave**, and it's my new go-to browser for development. It's incredibly fast out of the box because it blocks trackers and ads by default—no extensions needed, which is great for minimizing distractions. Since it's built on Chromium, I get the world-class DevTools I'm familiar with, which is essential for any web-related tasks. It's the perfect mix of speed, privacy, and developer features all in one package.
 
 ### Raycast(MacOS only)
 

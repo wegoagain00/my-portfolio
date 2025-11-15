@@ -1,3 +1,5 @@
+/* --- 1. Import Fira Code Nerd Font --- */
+@import url('https://cdn.jsdelivr.net/gh/lazy-actions/Fira-Code-Nerd-Font/css/fira-code-nerd-font.css');
 /* Keep the existing font definitions */
 /*@font-face {
   font-family: 'Inter var';
@@ -18,58 +20,58 @@
 
 /* Catppuccin Frappé Theme Variables */
 :root {
-  /* Base Colors */
-  --ctp-rosewater: #f2d5cf;
-  --ctp-flamingo: #eebebe;
-  --ctp-pink: #f4b8e4;
-  --ctp-mauve: #ca9ee6;
-  --ctp-red: #e78284;
-  --ctp-maroon: #ea999c;
-  --ctp-peach: #ef9f76;
-  --ctp-yellow: #e5c890;
-  --ctp-green: #a6d189;
-  --ctp-teal: #81c8be;
-  --ctp-sky: #99d1db;
-  --ctp-sapphire: #85c1dc;
-  --ctp-blue: #8caaee;
-  --ctp-lavender: #babbf1;
+    /* Base Colors */
+    --ctp-rosewater: #f2d5cf;
+    --ctp-flamingo: #eebebe;
+    --ctp-pink: #f4b8e4;
+    --ctp-mauve: #ca9ee6;
+    --ctp-red: #e78284;
+    --ctp-maroon: #ea999c;
+    --ctp-peach: #ef9f76;
+    --ctp-yellow: #e5c890;
+    --ctp-green: #a6d189;
+    --ctp-teal: #81c8be;
+    --ctp-sky: #99d1db;
+    --ctp-sapphire: #85c1dc;
+    --ctp-blue: #8caaee;
+    --ctp-lavender: #babbf1;
 
-  /* Text Colors */
-  --ctp-text: #c6d0f5;
-  --ctp-subtext1: #b5bfe2;
-  --ctp-subtext0: #a5adce;
+    /* Text Colors */
+    --ctp-text: #c6d0f5;
+    --ctp-subtext1: #b5bfe2;
+    --ctp-subtext0: #a5adce;
 
-  /* Overlay Colors */
-  --ctp-overlay2: #949cbb;
-  --ctp-overlay1: #838ba7;
-  --ctp-overlay0: #737994;
+    /* Overlay Colors */
+    --ctp-overlay2: #949cbb;
+    --ctp-overlay1: #838ba7;
+    --ctp-overlay0: #737994;
 
-  /* Surface Colors */
-  --ctp-surface2: #626880;
-  --ctp-surface1: #51576d;
-  --ctp-surface0: #414559;
+    /* Surface Colors */
+    --ctp-surface2: #626880;
+    --ctp-surface1: #51576d;
+    --ctp-surface0: #414559;
 
-  /* Background Colors */
-  --ctp-base: #303446;
-  --ctp-mantle: #292c3c;
-  --ctp-crust: #232634;
+    /* Background Colors */
+    --ctp-base: #303446;
+    --ctp-mantle: #292c3c;
+    --ctp-crust: #232634;
 }
 
 /* Updated body with Catppuccin Frappé theme */
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: subpixel-antialiased;
-  font-feature-settings: 'case' 1, 'cpsp' 1, 'dlig' 1, 'cv01' 1, 'cv02',
-    'cv03' 1, 'cv04' 1;
-  font-variation-settings: 'wght' 450;
-  font-variant: common-ligatures contextual;
-  letter-spacing: -0.02em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+        'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-feature-settings: 'case' 1, 'cpsp' 1, 'dlig' 1, 'cv01' 1, 'cv02',
+        'cv03' 1, 'cv04' 1;
+    font-variation-settings: 'wght' 450;
+    font-variant: common-ligatures contextual;
+    letter-spacing: -0.02em;
 
-  /* Catppuccin Frappé theme colors */
-  background-color: var(--ctp-base);
-  color: var(--ctp-text);
+    /* Catppuccin Frappé theme colors */
+    background-color: var(--ctp-base);
+    color: var(--ctp-text);
 }
 
 b,
@@ -78,130 +80,140 @@ h3,
 h4,
 h5,
 h6 {
-  font-variation-settings: 'wght' 650;
-  color: var(--ctp-text);
+    font-variation-settings: 'wght' 650;
+    color: var(--ctp-text);
 }
 
 h1 {
-  font-variation-settings: 'wght' 850;
-  color: var(--ctp-text);
+    font-variation-settings: 'wght' 850;
+    color: var(--ctp-text);
 }
 
 h2 {
-  font-variation-settings: 'wght' 750;
-  color: var(--ctp-text);
+    font-variation-settings: 'wght' 750;
+    color: var(--ctp-text);
 }
 
 @media screen and (min-device-pixel-ratio: 1.5),
-  screen and (min-resolution: 1.5dppx) {
-  body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+screen and (min-resolution: 1.5dppx) {
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
 }
 
 details summary {
-  cursor: pointer;
-  color: var(--ctp-text);
+    cursor: pointer;
+    color: var(--ctp-text);
 }
 
 img.next-image {
-  margin: 0;
+    margin: 0;
 }
 
 /* Updated link colors for Catppuccin Frappé */
 .prose a {
-  color: var(--ctp-blue);
-  text-decoration: none;
+    color: var(--ctp-blue);
+    text-decoration: none;
 }
 
 .prose a:hover {
-  color: var(--ctp-sky);
-  text-decoration: underline;
+    color: var(--ctp-sky);
+    text-decoration: underline;
 }
 
 /* Updated navigation colors */
 .nav-line .nav-link {
-  color: var(--ctp-subtext1);
-  transition: color 0.2s ease;
+    color: var(--ctp-subtext1);
+    transition: color 0.2s ease;
 }
 
 .nav-line .nav-link:hover {
-  color: var(--ctp-blue);
+    color: var(--ctp-blue);
 }
 
 /* Additional Catppuccin Frappé styling */
+/* --- 2. Apply Fira Code to all code elements --- */
+pre,
+code,
+pre span {
+    /* Use 'FiraCode Nerd Font' first, with fallbacks */
+    font-family: 'FiraCode Nerd Font', 'Fira Code', monospace;
+
+    /* This is CRITICAL: it enables the cool '->' '!=' ligatures */
+    font-variant-ligatures: contextual;
+}
 
 /* Code blocks */
 pre {
-  background-color: var(--ctp-surface0);
-  color: var(--ctp-text);
-  border: 1px solid var(--ctp-surface1);
-  border-radius: 0.375rem;
+    background-color: var(--ctp-surface0);
+    color: var(--ctp-text);
+    border: 1px solid var(--ctp-surface1);
+    border-radius: 0.375rem;
 }
 
 code {
-  background-color: var(--ctp-surface0);
-  color: var(--ctp-text);
-  padding: 0.125rem 0.25rem;
-  border-radius: 0.25rem;
-  font-size: 0.875em;
+    background-color: var(--ctp-surface0);
+    color: var(--ctp-text);
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.25rem;
+    font-size: 0.875em;
 }
 
 /* Blockquotes */
 blockquote {
-  border-left: 4px solid var(--ctp-blue);
-  background-color: var(--ctp-surface0);
-  color: var(--ctp-subtext1);
-  padding: 1rem;
-  margin: 1rem 0;
-  border-radius: 0 0.375rem 0.375rem 0;
+    border-left: 4px solid var(--ctp-blue);
+    background-color: var(--ctp-surface0);
+    color: var(--ctp-subtext1);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0 0.375rem 0.375rem 0;
 }
 
 /* Tables */
 table {
-  border-collapse: collapse;
-  width: 100%;
-  margin: 1rem 0;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1rem 0;
 }
 
 th,
 td {
-  border: 1px solid var(--ctp-surface1);
-  padding: 0.75rem;
-  text-align: left;
+    border: 1px solid var(--ctp-surface1);
+    padding: 0.75rem;
+    text-align: left;
 }
 
 th {
-  background-color: var(--ctp-surface0);
-  color: var(--ctp-text);
-  font-weight: 600;
+    background-color: var(--ctp-surface0);
+    color: var(--ctp-text);
+    font-weight: 600;
 }
 
 tr:nth-child(even) {
-  background-color: var(--ctp-mantle);
+    background-color: var(--ctp-mantle);
 }
 
 /* Selection styling */
 ::selection {
-  background-color: var(--ctp-surface2);
-  color: var(--ctp-text);
+    background-color: var(--ctp-surface2);
+    color: var(--ctp-text);
 }
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
-  width: 8px;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--ctp-base);
+    background: var(--ctp-base);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--ctp-surface2);
-  border-radius: 4px;
+    background: var(--ctp-surface2);
+    border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--ctp-overlay0);
+    background: var(--ctp-overlay0);
 }

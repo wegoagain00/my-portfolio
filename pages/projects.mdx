@@ -12,16 +12,16 @@ import Image from 'next/image'
 
 <div className="project-card">
 
-## ☁️ Real-Time Chat App on AWS EKS (Fargate)
+## Production Grade Three-Tier EKS Deployment
 
-A CI/CD pipeline and Kubernetes deployment for a multi-container Python (Flask) and Redis chat application. Deployed to a "serverless" EKS Fargate cluster with a Network Load Balancer.\
-**Tech Stack:** AWS (EKS, Fargate, ECR, NLB), Docker, Kubernetes, GitHub Actions, Helm
+A production grade Kubernetes deployment orchestrating a React and Flask microservices architecture. Features a fully automated CI/CD pipeline leveraging ArgoCD for state management, Prometheus for monitoring, Grafana for visualization, and AWS ALB for ingress traffic.\
+**Tech Stack:** AWS (EKS, RDS, ALB), Docker, Helm, Github Actions, ArgoCD, Prometheus, Grafana
 
-[GitHub Repo ↗](https://github.com/wegoagain-dev/redis-chat-app-python) | [Blog ↗](https://wegoagain.dev/posts/python-chat-app-part-1)
+[GitHub Repo ↗](https://github.com/wegoagain-dev/3-tier-eks) | [Blog ↗](https://wegoagain.dev/posts/end-to-end-eks)
 
 <Image
-  src="/images/python-chat-app/redis-chat-app-v1.svg"
-  alt=""
+  src="/images/three-tier-eks.jpeg"
+  alt="3 tier eks"
   width={700}
   height={400}
   className="next-image rounded-lg border border-gray-200 mt-4"
@@ -37,7 +37,7 @@ A CI/CD pipeline and Kubernetes deployment for a multi-container Python (Flask) 
 
 <div className="project-card">
 
-## 📸 Event-Driven Image Pipeline
+## Event-Driven Image Pipeline
 
 A serverless pipeline that automatically processes images uploaded to S3, extracts metadata and saves the details to DynamoDB. SQS is used to queue the images for processing.\
 **Tech Stack:** AWS (S3, Lambda, SQS, DynamoDB), Terraform, GitHub Actions
@@ -62,32 +62,7 @@ A serverless pipeline that automatically processes images uploaded to S3, extrac
 
 <div className="project-card">
 
-## ☁️ Three Tier App on AWS EKS
-
-A Three Tier App on AWS EKS (managed node) using an external database which is hosted on AWS\
-**Tech Stack:** AWS (EKS, VPC, RDS, ALB, IAM, PostgreSQL), Docker, Kubernetes, Helm, Github Actions, CI/CD
-
-[GitHub Repo ↗](https://github.com/wegoagain-dev/3-tier-eks) | [Documentation ↗](https://github.com/wegoagain-dev/3-tier-eks)
-
-<Image
-  src="/images/three-tier-eks.jpeg"
-  alt="3 tier eks"
-  width={700}
-  height={400}
-  className="next-image rounded-lg border border-gray-200 mt-4"
-/>
-
-</div>
-
-</div>
-
----
-
-<div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-
-<div className="project-card">
-
-## ☁️ Infrastructure as Code
+## Infrastructure as Code
 
 A three-tier architecture using AWS services. It includes a VPC setup, security groups, public/private subnets and availability zones for high availability.\
 **Tech Stack:** Terraform, AWS (EC2, VPC, RDS, AZ )
@@ -112,7 +87,32 @@ A three-tier architecture using AWS services. It includes a VPC setup, security 
 
 <div className="project-card">
 
-## ☁️ Lambda Snapshot Cleaner (Cost Optimisation)
+## Real-Time Chat App on AWS EKS (Fargate)
+
+A CI/CD pipeline and Kubernetes deployment for a multi-container Python (Flask) and Redis chat application. Deployed to a "serverless" EKS Fargate cluster with a Network Load Balancer.\
+**Tech Stack:** AWS (EKS, Fargate, ECR, NLB), Docker, Kubernetes, GitHub Actions, Helm
+
+[GitHub Repo ↗](https://github.com/wegoagain-dev/redis-chat-app-python) | [Blog ↗](https://wegoagain.dev/posts/python-chat-app-part-1)
+
+<Image
+  src="/images/python-chat-app/redis-chat-app-v1.svg"
+  alt=""
+  width={700}
+  height={400}
+  className="next-image rounded-lg border border-gray-200 mt-4"
+/>
+
+</div>
+
+</div>
+
+---
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+
+<div className="project-card">
+
+## Lambda Snapshot Cleaner (Cost Optimisation)
 
 Automated AWS cost savings by creating a Python Lambda function that finds and deletes unattached EBS snapshots. The solution uses Boto3 to scan EC2 resources and is configured with a specific IAM role for secure, least-privilege execution.\
 **Tech Stack:** AWS (Lambda, EC2, EBS, IAM), Python
